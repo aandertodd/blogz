@@ -1,14 +1,13 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<a href='http://localhost:5000/blog'>Main Blog Page</a>
-<!-- <a href='/logout'>log out</a> -->
-
-<h1>{{ blog_title }}</a></h3>
-
-<p>{{ blog_body }}</p>
 
 
+<h1>{{ one_blog.title }}</a></h3>
+
+<p>{{ one_blog.body }}</p>
+
+<p>Written by <a href='blog?user={{one_blog.owner.id}}'>{{one_blog.owner.username}}</a></p>
 
 
 
